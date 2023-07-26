@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Guessing Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+          <h1>Guess the Number!</h1>
+          <p>I am thinking of a number between 1 and 100. Can you guess what it is?</p>
+          <form>
+            <label for="guess">My Guess</label>
+            <input type="number" id="guess">
+            <input type="submit" id="submitGuess" value="Check My Guess">
+          </form>
+          <p id="feedback" class="feedback"></p>
+      
+  <script>
+    let randNum = Math.floor(Math.random() * 100) + 1;
+    console.log("A random NUMBER has generated: ");
+    let guess, noOfGuesses = 0;
+    let textColor;
+    const feedback = document.getElementById('feedback');
+    const submitButton = document.getElementById('submitGuess');
+    
+
+    submitButton.addEventListener('click', function (event) {
+      event.preventDefault();
+      guess = parseInt(document.getElementById('guess').value);
+      if (guess > 100) {
+        feedback.textContent = "Number should not be greater than 100";
+      }
+      else if (guess < randNum) {
+        feedback.textContent = "The number is bigger than this...:(";
+        document.body.style.background="red";
+      } else if (guess > randNum) {
+        feedback.textContent = "The number is Smaller than this...:(";
+        document.body.style.background="yellow";
+      }  else if (guess === randNum) {
+        noOfGuesses++;
+        feedback.textContent = `Hurraayyy!! You guessed it right in ${noOfGuesses} guesses`;
+        document.body.style.background="green";
+        submitButton.disabled = true;
+      }
+      noOfGuesses++;
+    });
+  </script>
+</body>
+</html>

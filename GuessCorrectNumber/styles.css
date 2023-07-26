@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+  }
+  
+
+  
+  
+  h1 {
+    color: #007BFF;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="number"] {
+    width: 100px;
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  /* #feedback {
+    font-weight: bold;
+    color: #007BFF;
+  } */
+  
+  /* Responsive Styles */
+  @media only screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .left-side {
+      order: 2;
+      margin-bottom: 20px;
+    }
+    .right-side {
+      order: 1;
+    }
+  }
+  

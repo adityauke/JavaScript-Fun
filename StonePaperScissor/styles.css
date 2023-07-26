@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #a0b7f2;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.game-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.result {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.vectArt{
+    margin: 0;
+    padding: 0;
+    top: 0;
+    width:100vw;
+    max-height: 350px;
+
+}
