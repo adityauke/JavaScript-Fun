@@ -102,8 +102,8 @@ const jokes = [
   ];
 
 
-  const jokeDisplay = document.getElementById("jokeDisplay");
-  const generateJokeBtn = document.getElementById("generateJokeBtn");
+  const jokeDisplay = document.getElementById("joke");
+  const generateJokeBtn = document.getElementById("generate_joke");
 
   generateJokeBtn.addEventListener("click", () => {
       let randNum = Math.floor(Math.random() * jokes.length);
