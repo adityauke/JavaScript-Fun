@@ -1,19 +1,56 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
     <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <img class="vectArt" src="https://img.freepik.com/free-vector/hands-fist-victory-symbol_107791-8324.jpg?w=1380&t=st=1690358315~exp=1690358915~hmac=f5d7ab9150080e515b98c5556fc7ddfcc89082fdb7f0b1376e8cb1f63ba11d1e" alt="vector-art"/>
-    <h1>Rock Paper Scissors</h1>
-    <div class="game-container">
-        <button class="rock">Rock</button>
-        <button class="paper">Paper</button>
-        <button class="scissors">Scissors</button>
-    </div>
-    <div class="result">Choose your move...</div>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Rock Paper Scissors</h1>
+      </header>
 
+      <div id="inside">
+        <p id="instruction">Select your attack</p>
+
+        <div class="choice">
+          <div class="select-choice" id="rock">
+            <img
+              class="img-weapon"
+              src="https://res.cloudinary.com/itsellej/image/upload/v1533400140/rock-paper-scissors/rock.png"
+              alt="rock"
+            />
+          </div>
+          <div class="select-choice" id="paper">
+            <img
+              class="img-weapon"
+              src="https://res.cloudinary.com/itsellej/image/upload/v1533400143/rock-paper-scissors/paper.png"
+              alt="paper"
+            />
+          </div>
+          <div class="select-choice" id="scissors">
+            <img
+              class="img-weapon"
+              src="https://res.cloudinary.com/itsellej/image/upload/v1533400144/rock-paper-scissors/scissors.png"
+              alt="scissors"
+            />
+          </div>
+        </div>
+
+        <div class="result">
+          <p id="message">Who will win the first game?</p>
+        </div>
+
+        <div class="scores">
+          <p class="total-score">Your score: <span id="user-score">0</span></p>
+          <p class="total-score">
+            Computer's score: <span id="computer-score">0</span>
+          </p>
+          <button id="reset-button">reset score</button>
+        </div>
+      </div>
+    </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
